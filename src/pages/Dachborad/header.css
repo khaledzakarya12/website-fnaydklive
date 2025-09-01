@@ -1,0 +1,18 @@
+.heade{
+
+display: flex;
+justify-content: start;
+align-items: center;
+font-size: 15px;
+text-align: center;
+flex-direction: row;
+}
+
+.header-title{
+  font-size: 24px;
+  font-weight: bold;
+margin-right: 80px;
+color: #333;
+
+
+}

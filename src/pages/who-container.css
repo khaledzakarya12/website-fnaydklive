@@ -1,0 +1,19 @@
+.who-container {
+  padding: 40px;
+  border-radius: 10px;
+  color: #1d1c1c;
+  margin-right: 50px;
+}
+
+.who-container h1 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 15px;
+  color: rgba(219, 7, 7, 0.719);
+}
+
+.who-container p {
+  font-size: 16px;
+  line-height: 1.5;
+  margin-bottom: 10px;
+}

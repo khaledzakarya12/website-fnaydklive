@@ -1,0 +1,19 @@
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+
+/* يغطي كامل الشاشة */
+#layout {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; 
+}
+
+/* يخلي الـmain يتمدّد وياخد المساحة الباقية */
+.main-content {
+  flex: 4;
+  min-height: 800px;
+}
+

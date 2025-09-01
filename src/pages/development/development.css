@@ -1,0 +1,20 @@
+
+.development-container {
+  padding: 40px;
+  border-radius: 10px;
+  color: #1d1c1c;
+  margin-right: 50px;
+}
+
+.development-container h1 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 15px;
+  color: rgb(228, 12, 12);
+}
+
+.development-container p {
+  font-size: 16px;
+  line-height: 1.5;
+  margin-bottom: 10px;
+}

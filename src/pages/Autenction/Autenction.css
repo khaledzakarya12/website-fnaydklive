@@ -1,0 +1,16 @@
+.autenction{
+
+display: flex;
+  flex-direction: column;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  margin-top: 40px;
+  padding: 0 20px;
+}
+
+.autenction-register{
+cursor: pointer;
+
+
+}

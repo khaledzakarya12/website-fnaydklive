@@ -1,0 +1,87 @@
+/* Container */
+.newstable {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 900px; /* تكبير على اللابتوب */
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* Table */
+.table {
+  margin-top: 30px;
+  background-color: #ffffff;
+  width: 100%;
+  border-collapse: collapse;
+  box-shadow: 0 0 20px rgba(0,0,0,0.2);
+}
+
+.table th, .table td {
+  padding: 12px 15px;
+  border: 1px solid #ddd;
+  text-align: center;
+}
+
+.table th {
+  background-color: #000;
+  color: #fff;
+  font-weight: bold;
+}
+
+/* Buttons */
+.btn1 {
+  padding: 10px 20px;
+  margin: 20px 0;
+  font-size: 16px;
+  font-family: 'Courier New', Courier, monospace;
+  background-color: #0d0452;
+  border-radius: 50px;
+  color: #ffffff;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.btn1:hover {
+  transform: scale(1.1);
+}
+
+/* Delete button */
+.btn2 {
+  font-size: 14px;
+  font-family: 'Courier New', Courier, monospace;
+  background-color: #d4d2e4;
+  width: 100%;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.btn2:hover {
+  transform: scale(1.05);
+  background-color: #bcb9d2;
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+  .newstable {
+    max-width: 100%; /* ياخد كل عرض الشاشة */
+    margin-left: 0;
+    padding: 0 10px;
+  }
+
+  .btn1 {
+    margin-right: 0;
+    width: 100%;
+  }
+
+  .table th, .table td {
+    padding: 10px;
+    font-size: 14px;
+  }
+
+  .btn2 {
+    font-size: 12px;
+  }
+}

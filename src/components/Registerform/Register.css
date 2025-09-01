@@ -1,0 +1,119 @@
+.form-register {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  margin: 50px auto;
+  padding: 40px 25px;
+  max-width: 400px;
+  width: 100%;
+  border-radius: 48px;
+  background: #1a1a1a; /* خلفية داكنة */
+  color: #fff;
+  box-shadow: 0px 2px 50px rgba(110, 130, 208, 0.2);
+  font-family: 'Cairo', sans-serif;
+}
+
+.form-title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #ff4d4d;
+  text-align: center;
+}
+
+.form-group {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.form-label {
+  color: #ffffff;
+  font-weight: 600;
+  margin-left: 5px;
+  align-self: flex-start;
+}
+
+.input-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.input-icon {
+  position: absolute;
+  left: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #ff9999;
+  font-size: 20px;
+  pointer-events: none;
+}
+
+.input-form {
+  width: 100%;
+  padding: 18px 25px 18px 50px; /* مساحة للأيقونة */
+  border: 2px solid #333;
+  border-radius: 50px;
+  font-size: 16px;
+  outline: none;
+  background-color: #2a2a2a;
+  color: #fff;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.input-form::placeholder {
+  color: #aaa;
+}
+
+.input-form:focus {
+  border-color: #ff4d4d;
+  box-shadow: 0 0 12px rgba(255,77,77,0.5);
+}
+
+.button-form {
+  padding: 15px 80px;
+  font-size: 18px;
+  font-weight: 600;
+  border-radius: 50px;
+  background-color: #ff4d4d;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.button-form:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(255,77,77,0.7);
+}
+
+.form-error {
+  color: #ff4d4d;
+  font-size: 14px;
+  text-align: center;
+}
+
+/* Responsive */
+@media screen and (max-width: 480px) {
+  .form-register {
+    padding: 30px 15px;
+    gap: 20px;
+  }
+
+  .button-form {
+    padding: 12px 60px;
+    font-size: 16px;
+  }
+
+  .input-form {
+    padding: 16px 20px 16px 45px;
+    font-size: 15px;
+  }
+
+  .input-icon {
+    font-size: 18px;
+    left: 12px;
+  }
+}

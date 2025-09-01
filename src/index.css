@@ -1,0 +1,40 @@
+@import "./components/navbar/navbar.css";
+@import "./components/navbar/desktopmenu/descktop-menu.css";
+@import "./components/navbar/Mobile-menu/mobile-menue.css";
+@import "./components/Loginform/login.css";
+@import "./components/Registerform/Register.css";
+@import "./pages/Autenction/Autenction.css";
+@import "./pages/Dachborad/Newsform.css";
+@import "./pages/Dachborad/header.css";
+@import "./pages/Dachborad/Newstable.css";
+@import "./pages/local/interntional/Newslist.css";
+@import "./pages/news/NewsDtaills.css";
+@import "./pages/NewsTicker/NewTicker.css";
+@import "./components/footer/footer.css";
+@import "./pages/local/interntional/interntional.css";
+@import "./App.css";
+@import "./pages/contact/contact.css";
+@import "./pages/Dachborad/edit-news.css";
+@import "./pages/breaking/breaking.css";
+@import "./App.css";
+@import "./components/loader/loader.css";
+@import "./pages/Dachborad/Dachborad.css";
+@import "./pages/privacy/privacy.css";
+@import "./pages/who-container.css";
+@import "./pages/development/development.css";
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&display=swap');
+
+* {
+
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+
+}
+
+body{
+font: 400 16px/1.5 'Cairo', sans-serif;
+color: #000000;
+background-color: #f8f9fa;
+
+}
