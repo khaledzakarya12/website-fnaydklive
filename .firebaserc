@@ -1,0 +1,15 @@
+{
+  "projects": {
+    "default": "website-akkar"
+  },
+  "targets": {
+    "website-akkar": {
+      "hosting": {
+        "website-akkar": [
+          "website-akkar"
+        ]
+      }
+    }
+  },
+  "etags": {}
+}
