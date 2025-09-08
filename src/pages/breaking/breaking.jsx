@@ -4,7 +4,7 @@ import { db } from "../../utils/firebaseconfig";
 import { motion } from "framer-motion";
 import { MainContext } from "../../utils/context";
 import { FaFire, FaTrash } from "react-icons/fa";
-import { Link } from "react-router-dom"; // 👈 ضيف هيدا
+import { Link } from "react-router-dom"; 
 
 function Breaking() {
   const [breakingNews, setBreakingNews] = useState([]);

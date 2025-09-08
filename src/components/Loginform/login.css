@@ -115,3 +115,21 @@
     left: 15px;
   }
 }
+.google-button {
+  background-color: #4285F4;
+  color: white;
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.google-button:hover {
+  background-color: #357ae8;
+}

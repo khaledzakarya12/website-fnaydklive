@@ -11,6 +11,7 @@ import Sportnews from './pages/sports/sports';
 import Educationalnews from './pages/educatinal';
 import NewsDetails from './pages/news/NewsDetails';
 import Dashboard from './pages/Dachborad/Dachborad';
+import Advertisement from './pages/advertisement/advertisement';
 import SearchPage from './pages/search/search';
 import Miscellaneous from './pages/miscellaneous';
 import { auth, db } from "./utils/firebaseconfig";
@@ -25,7 +26,7 @@ import Development from './pages/development/development';
 import EditNews from './pages/Dachborad/editnews';
 import NotifyUser from './components/Notifyuser/Notifyuser';
 import BreakingPage from './pages/breaking/breaking';
-
+import RedirectPage from './components/RedirectPage/RedirectPage';
 
 function App() {
   const [user, loading] = useAuthState(auth);
@@ -99,6 +100,7 @@ function App() {
 
       <main className="main-content">
         <Routes>
+           <Route path="/:shortId" element={<RedirectPage />} />
           <Route path="/" element={<Home />} />
           <Route path="/local" element={<Local />} />
           <Route path="/international" element={<International />} />
@@ -115,6 +117,7 @@ function App() {
           <Route path="/edit-news/:id" element={<EditNews />} />
           <Route path="/breaking" element={<BreakingPage />} />
           <Route path="/miscellaneous" element={<Miscellaneous />} />
+          <Route path="/advertisement" element={<Advertisement />} />
         </Routes>
       </main>
 

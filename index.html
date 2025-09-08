@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="ar" dir="rtl">
   <head>
     <meta charset="UTF-8" />
@@ -24,14 +24,20 @@
     <meta name="twitter:title" content="شبكة عكار الإخبارية">
     <meta name="twitter:description" content="آخر الأخبار المحلية والدولية من عكار ولبنان والعالم.">
     <meta name="twitter:image" content="https://website-akkar.web.app/preview.jpg">
+
+    <!-- Link to CSS (من مجلد build/static/css) -->
+    <link rel="stylesheet" href="./static/css/main.css" />
   </head>
 
   <body>
     <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
-    <script async 
-        src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3444296762705409" 
-        crossorigin="anonymous"></script>
 
+    <!-- ملفات JS بعد Build -->
+    <script type="module" src="/src/main.jsx"></script>
+
+    <!-- Google Adsense -->
+    <script async 
+      src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3444296762705409" 
+      crossorigin="anonymous"></script>
   </body>
 </html>

@@ -1,0 +1,29 @@
+.advertisement-page {
+  padding: 30px;
+  background-color: #f8f9fa;
+  margin-left: 100px;
+}
+
+.advertisement-page h1 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.advertisement-page p {
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.ad-item {
+  border: 2px solid #d10000;
+  padding: 10px;
+  border-radius: 10px;
+  background: #fff1e0;
+  text-align: center;
+}
+
+.ad-item img {
+  max-width: 100%;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}

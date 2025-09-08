@@ -35,6 +35,9 @@ function Desktop() {
 <NavLink to="/breaking" className={({ isActive }) => `items ${isActive ? "items-selected" : ""}`}>
         عاجل
       </NavLink>
+      <NavLink to="/advertisement" className={({ isActive }) => `items ${isActive ? "items-selected" : ""}`}>
+        إعلانات
+      </NavLink>
       {userData?.role === "admin" && (
         <NavLink to="/dashboard" className={({ isActive }) => `items ${isActive ? "items-selected" : ""}`}>
           لوحة التحكم

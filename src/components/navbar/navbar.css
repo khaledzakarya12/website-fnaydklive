@@ -151,7 +151,7 @@
 
 .primary-btn { 
   max-width: 100%; 
-  background-color: #e70e0ebb; 
+  background-color:#2b2525;
   padding: 5px 10px; 
   color: #fff; 
   margin: 0 10px; 
@@ -183,47 +183,57 @@
   opacity: 1;
   pointer-events: all;
 }
+.close-btn {
+  background: transparent;
+  border: none;
+  color: #fff;
+  font-size: 28px;
+  margin-bottom: 16px;
+  cursor: pointer;
+  align-self: flex-end; /* يطلع يمين */
+}
 
-/* قائمة الجوال */
 .mobilemenu-wrapper {
   position: fixed;
-  top: 0;
-  right: -300px; 
-  width: 250px;
+  top: -100vh;
+  left: 0;
+  width: 100%;
   height: 100vh;
-  background: #990100; 
+  background: rgb(187, 1, 1);
   z-index: 999;
-  box-shadow: -2px 0 15px rgba(0, 0, 0, 0.3);
   display: flex;
   flex-direction: column;
-  padding-top: 60px;
-  transition: right 0.5s ease;
+  padding-top: 80px;
+  transition: top 0.6s cubic-bezier(0.77, 0, 0.175, 1);
 }
 
 .mobilemenu-wrapper.show {
-  right: 0; 
+  top: 0;
 }
 
-/* العناصر داخل القائمة */
 .mobilemenu-wrapper .mobile-content-items {
-  opacity: 0.9;
-  transform: translateX(30px);
-  padding: 12px 20px;
+  opacity: 0;
+  transform: translateY(-30px);
+  padding: 14px 20px;
   font-size: 18px;
   color: #fff;
-  transition: all 0.4s ease;
+  transition: all 0.45s ease;
+  pointer-events: none;
 }
 
-/* عند ظهور القائمة، ترتيب العناصر تدريجيًا */
-.mobilemenu-wrapper.show .mobile-content-items:nth-child(1) { transition-delay: 0.05s; opacity: 1; transform: translateX(0); }
-.mobilemenu-wrapper.show .mobile-content-items:nth-child(2) { transition-delay: 0.1s; opacity: 1; transform: translateX(0); }
-.mobilemenu-wrapper.show .mobile-content-items:nth-child(3) { transition-delay: 0.15s; opacity: 1; transform: translateX(0); }
-.mobilemenu-wrapper.show .mobile-content-items:nth-child(4) { transition-delay: 0.2s; opacity: 1; transform: translateX(0); }
-.mobilemenu-wrapper.show .mobile-content-items:nth-child(5) { transition-delay: 0.25s; opacity: 1; transform: translateX(0); }
-.mobilemenu-wrapper.show .mobile-content-items:nth-child(6) { transition-delay: 0.3s; opacity: 1; transform: translateX(0); }
-.mobilemenu-wrapper.show .mobile-content-items:nth-child(7) { transition-delay: 0.35s; opacity: 1; transform: translateX(0); }
-.mobilemenu-wrapper.show .mobile-content-items:nth-child(8) { transition-delay: 0.4s; opacity: 1; transform: translateX(0); }
-.mobilemenu-wrapper.show .mobile-content-items:nth-child(9) { transition-delay: 0.45s; opacity: 1; transform: translateX(0); }
+.mobilemenu-wrapper.show .mobile-content-items {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+/* تأخير تدريجي لكل عنصر */
+.mobilemenu-wrapper.show .mobile-content-items:nth-child(1) { transition-delay: 0.1s; }
+.mobilemenu-wrapper.show .mobile-content-items:nth-child(2) { transition-delay: 0.2s; }
+.mobilemenu-wrapper.show .mobile-content-items:nth-child(3) { transition-delay: 0.3s; }
+.mobilemenu-wrapper.show .mobile-content-items:nth-child(4) { transition-delay: 0.4s; }
+.mobilemenu-wrapper.show .mobile-content-items:nth-child(5) { transition-delay: 0.5s; }
+.mobilemenu-wrapper.show .mobile-content-items:nth-child(6) { transition-delay: 0.6s; }
 
 /* Responsive */
 @media screen and (max-width: 900px) { 
@@ -236,4 +246,28 @@
   .navbar-left-side-text { font-size: 18px; }
   .navbar-left-side-logo-text { padding: 4px 8px; }
   .navbar-left-side-symbol { font-size: 18px; width: 40px; height: 40px; }
+  
+}
+
+
+/* زر الترجمة المدوّر */
+.lang-btn {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  background-color: #ffc609; /* أصفر */
+  color: #990100;           /* لون الخط */
+  font-weight: 700;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px; /* حجم النص داخل الدائرة */
+}
+
+.lang-btn:hover {
+  background-color: #e6b400; /* أصفر أغمق عند الـ hover */
+  transform: scale(1.1);
 }

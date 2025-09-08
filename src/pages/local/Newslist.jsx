@@ -23,7 +23,8 @@ export default function NewsList({ category = null }) {
     educational: "تربوي",
     local: "المحلية",
     breaking: "أخبار عاجلة",
-    miscellaneous: "متفرقات"
+    miscellaneous: "متفرقات",
+    advertisement: "إعلانات",
   };
 
   useEffect(() => {
@@ -153,7 +154,8 @@ export default function NewsList({ category = null }) {
       {renderNewsSection(filterByCategory("international"), categoryLabels.international, "international")}
       {renderNewsSection(filterByCategory("sports"), categoryLabels.sports, "sports")}
       {renderNewsSection(filterByCategory("educational"), categoryLabels.educational, "educational")};
-      {renderNewsSection(filterByCategory("miscellaneous"), categoryLabels.miscellaneous, "miscellaneous")}
+      {renderNewsSection(filterByCategory("miscellaneous"), categoryLabels.miscellaneous, "miscellaneous")};
+      {renderNewsSection(filterByCategory("advertisement"), categoryLabels.advertisement, "advertisement")}
     </div>
   );
 }

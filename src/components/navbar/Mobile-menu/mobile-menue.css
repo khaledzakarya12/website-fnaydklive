@@ -4,7 +4,7 @@
   overflow-y: auto;
   background-color: #fff;
   -webkit-overflow-scrolling: touch; 
-  background: #990100; 
+  background: #770505c0; 
 }
 
 .mobile-content {
@@ -14,6 +14,9 @@
   display: flex;
   flex-direction: column;
   gap: 15px; 
+  font-size: 20px;
+  font-weight: 600;
+  font-family: 'cairo', sans-serif;
 }
 
 .mobile-content-items {
@@ -40,45 +43,45 @@ color: #ffffff;
   position: relative;
   display: flex;
   align-items: center;
-  max-width: 220px;
+  max-width: 100%;   /* بدل 220px صارت كاملة تقريباً */
 }
 
 .search-icon {
   position: absolute;
-  left: 15px;      /* مسافة الأيقونة من اليسار */
-  color: #ffcfcf;  /* لون الأيقونة */
-  font-size: 16px;
-  pointer-events: none; /* تجعل الأيقونة غير قابلة للنقر */
+  left: 15px;
+  color: #ffcfcf;
+  font-size: 18px;   /* كبّر الأيقونة شوي */
+  pointer-events: none;
 }
 
 .search-input {
   width: 100%;
-  padding: 10px 20px 10px 40px; /* إضافة مساحة للأيقونة */
-  border: 1px solid #d10000;
-  background-color: #990100;
+  padding: 12px 20px 12px 45px; /* زيادة الـ padding للارتفاع ومسافة الأيقونة */
+  border: 1px solid #fff4f4;
+  background-color: #dd0909fd;
   border-radius: 50px;
   color: #fff;
-  font-size: 14px;
+  font-size: 16px;    /* زيادة حجم الخط */
   outline: none;
   transition: all 0.3s ease;
 }
 
 .search-input::placeholder {
   color: #ffcfcf;
+  font-size: 16px;   /* نفس حجم الخط */
 }
 
 .search-input:focus {
   border-color: #ff0000;
-  box-shadow: 0 0 8px rgba(255,0,0,0.5);
-  background-color: #a30000;
+  box-shadow: 0 0 10px rgba(255,0,0,0.5);
+  background-color: #3f2424;
 }
-
 
 .primary-btn {
   max-width: 100%;
   margin: 20px auto 0 auto;
   padding: 10px 10px;
-  background-color: #810606;
+  background-color: #2b2525;
   color: white;
   border: none;
 
@@ -91,7 +94,31 @@ color: #ffffff;
 }
 
 .primary-btn:hover {
-  background-color: #790404;
+  background-color: #2b2525;
 }
+
+/* زر الترجمة المدوّر */
+.lang-btn {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  background-color: #f1efe6; /* أصفر */
+  color: #990100;           /* لون الخط */
+  font-weight: 700;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  margin-bottom: 20px; /* مسافة عن باقي العناصر */
+  transition: all 0.3s ease;
+}
+
+.lang-btn:hover {
+  background-color: #cec6ab; /* أصفر أغمق عند hover */
+  transform: scale(1.1);
+}
+
 
 

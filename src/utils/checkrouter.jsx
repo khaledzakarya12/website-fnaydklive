@@ -9,6 +9,7 @@ const DashboardPath = ""
 const WhoPath = ""
 const breakingPath = ""
 const MiscellaneousPath = ""
+const advertisementPath = ""
 export const isMiscellaneousSelected = (currentPath) => currentPath === MiscellaneousPath;
 export const islocalSelected = (currentPath) => currentPath === localPath;
 export const isInterntionalSelected = (currentPath) => currentPath === InterntionalPath;
@@ -18,3 +19,4 @@ export const isEducatonalSelected = (currentPath) => currentPath === Educational
 export const isDachboradSelected = (currentPath) => currentPath === DashboardPath;
 export const isWhoSelected = (currentPath) => currentPath === WhoPath;
 export const isBreakingSelected = (currentPath) => currentPath === breakingPath;
+export const isAdvertisementSelected = (currentPath) => currentPath === advertisementPath;

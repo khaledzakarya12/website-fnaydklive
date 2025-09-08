@@ -23,7 +23,7 @@
 @import "./pages/who-container.css";
 @import "./pages/development/development.css";
 @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&display=swap');
-
+@import "./pages/advertisement/advertisement.css";
 * {
 
 margin: 0;

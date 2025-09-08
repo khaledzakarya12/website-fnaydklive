@@ -5,7 +5,7 @@ import { ref, uploadBytes, getDownloadURL } from "firebase/storage";
 import { db, auth, storage } from "../../utils/firebaseconfig";
 import { onAuthStateChanged } from "firebase/auth";
 
-export default function NewsFormWithNotifications() {
+export default function NewsFormWithShortLink() {
   const [title, setTitle] = useState("");
   const [content, setContent] = useState("");
   const [category, setCategory] = useState("local");
@@ -15,6 +15,7 @@ export default function NewsFormWithNotifications() {
   const [videoPreview, setVideoPreview] = useState(null);
   const [userRole, setUserRole] = useState(null);
   const [loading, setLoading] = useState(true);
+  const [shortLink, setShortLink] = useState("");
   const navigate = useNavigate();
 
   const categories = [
@@ -24,9 +25,10 @@ export default function NewsFormWithNotifications() {
     { slug: "educational", label: "تربوي" },
     { slug: "miscellaneous", label: "متفرقات" },
     { slug: "breaking", label: "عاجل" },
+    { slug: "advertisement", label: "إعلان" },
   ];
 
-  // التحقق من صلاحية المسؤول
+  // التحقق من صلاحية الأدمن
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, async (currentUser) => {
       if (currentUser) {
@@ -76,7 +78,7 @@ export default function NewsFormWithNotifications() {
       }
 
       // إضافة الخبر إلى Firestore
-      await addDoc(collection(db, "all-news"), {
+      const docRef = await addDoc(collection(db, "all-news"), {
         title: title.trim(),
         content: content.trim(),
         category: category === "breaking" ? "breaking" : category,
@@ -85,13 +87,25 @@ export default function NewsFormWithNotifications() {
         createdAt: serverTimestamp()
       });
 
+      // إنشاء رابط قصير تلقائي
+      const shortId = Math.floor(100000 + Math.random() * 900000).toString();
+      await addDoc(collection(db, "short-links"), {
+        shortId: shortId,
+        longUrl: `/news/${docRef.id}`,
+        createdAt: serverTimestamp()
+      });
+
+      const finalShortLink = `${window.location.origin}/${shortId}`;
+      setShortLink(finalShortLink);
+      navigator.clipboard.writeText(finalShortLink);
+
       // تنظيف الفورم
       setTitle(""); setContent(""); setCategory("local");
       setImageFiles([]); setImagePreviews([]);
       setVideoFile(null); setVideoPreview(null);
 
+      alert("✔ الخبر نشر! الرابط القصير تم نسخه تلقائياً.");
       navigate("/"); // تحويل المستخدم للصفحة الرئيسية
-      alert("تم نشر الخبر بنجاح! إشعارات المشتركين ستصل تلقائيًا.");
     } catch (error) {
       console.error(error);
       alert("حدث خطأ أثناء نشر الخبر!");
@@ -100,7 +114,7 @@ export default function NewsFormWithNotifications() {
 
   return (
     <form className="form4" onSubmit={handleSubmit}>
-      <h2>نشر خبر جديد مع إشعار</h2>
+      <h2>نشر خبر جديد مع رابط قصير للأدمن</h2>
       <input className="input2" type="text" placeholder="عنوان الخبر" value={title} onChange={(e) => setTitle(e.target.value)} />
       <textarea className="input1" placeholder="محتوى الخبر" value={content} onChange={(e) => setContent(e.target.value)} />
       <select className="select" value={category} onChange={(e) => setCategory(e.target.value)}>
@@ -114,6 +128,8 @@ export default function NewsFormWithNotifications() {
       {videoPreview && <video className="video-preview" controls><source src={videoPreview} type="video/mp4" />متصفحك لا يدعم تشغيل الفيديو</video>}
 
       <button className="btn" type="submit">نشر الخبر وإرسال إشعار</button>
+
+     
     </form>
   );
 }
